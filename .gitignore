@@ -1,0 +1,39 @@
+# Ignore build output directory
+/build
+/export
+
+# Ignore object files and dependent files
+.o
+.d
+
+#Ignore logs folder and log files
+/logs
+*.log
+*.log.old
+
+#Ignore lock files
+.lock
+
+.bin
+.pdi
+.peers.ini
+.repo.yaml
+.vitisWorkspace.json
+
+# --- 소스/문서만 추적: Vivado/Vitis HLS/PetaLinux 생성물 전체 제외 ---
+
+# Vivado 프로젝트 (재생성 가능한 생성물, 수백MB~)
+/mmult_zcu104/
+
+# Vitis HLS 프로젝트 실행 디렉토리 (실제 소스는 /hls 에 있음)
+/mmult_hls/
+
+# PetaLinux 프로젝트 전체 (petalinux_accel/project/, Yocto 빌드 포함 수십GB)
+/project/
+
+# IDE/워크스페이스 메타데이터
+/.theia/
+/.wsdata/
+
+# Xilinx 툴 세션 캐시 (XSCT 등, 재생성 가능)
+.Xil/
