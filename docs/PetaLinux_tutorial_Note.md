@@ -249,7 +249,7 @@ Linux 유저스페이스 애플리케이션 개발 (C++ / Python)
 | **Vitis HLS**            | 2024.1                                          | C/C++ 알고리즘으로부터 하드웨어 가속기 IP 생성 및 RTL 합성            |
 | **PetaLinux Tools**      | 2024.1                                          | 임베디드 리눅스 커널, 디바이스 트리, rootfs, 부팅 이미지(BOOT.BIN) 빌드 |
 | **ZCU104 PetaLinux BSP** | 2024.1 (`xilinx-zcu104-v2024.1-05230256.bsp`)   | ZCU104 보드 전용 초기 리눅스 보드 지원 패키지                     |
-| **Ubuntu Linux**         | 24.04 LTS (Native 64-bit)                       | Vivado / Vitis HLS / PetaLinux를 모두 구동하는 단일 호스트 OS 환경 |
+| **Ubuntu Linux**         | 22.04.3 LTS (공식 지원 기준)                     | Vivado / Vitis HLS / PetaLinux 호스트 환경 |
 | **ZCU104 평가 보드**         | Rev C (Zynq UltraScale+ MPSoC)                  | 최종 하드웨어 배포 및 테스트 타깃 보드                            |
 
 
@@ -266,8 +266,7 @@ Linux 유저스페이스 애플리케이션 개발 (C++ / Python)
 - **RAM:** 최소 8 GB 이상 (16 GB 이상 권장)
 - **CPU:** 2 GHz 이상 멀티코어 (8코어 이상 권장)
 - **저장 공간 (Disk Space):** 최소 100 GB 이상의 여유 공간
-- **호스트 OS:** 64-bit Linux (Ubuntu 24.04 LTS 및 22.04 LTS 지원)
-- 본 튜토리얼에서는 **네이티브(Native) Ubuntu 24.04 LTS** 환경 한 대에서 Vivado, Vitis HLS, PetaLinux Tools를 모두 설치하여 진행하였습니다. (WSL이나 Windows 듀얼 부팅 없이 순수 Linux 머신에서 전체 워크플로우가 동작합니다.)
+- **호스트 OS:** [AMD PetaLinux 2024.1 설치 요구사항](https://docs.amd.com/r/2024.1-English/ug1144-petalinux-tools-reference-guide/Installation-Requirements)의 64비트 Linux를 사용합니다. 실습 호스트에서는 네이티브 Ubuntu 22.04.5 LTS와 2024.1 도구를 사용합니다.
 
 ### 2.3 단일 네이티브 Linux 환경 구성
 
