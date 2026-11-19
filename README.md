@@ -36,7 +36,7 @@ petalinux_accel/
 
 ## 진행 순서
 
-처음 시작한다면 [SD 카드 준비와 UART 부팅](docs/PetaLinux_tutorial_Note.md#219-sd-카드-파티션-및-파일-준비)으로 이동하세요. 이후 [보드에서 행렬곱 실행](docs/PetaLinux_tutorial_Note.md#15-가속기-실행-검증-및-성능-측정)을 확인하면 이 실습이 완료됩니다. 최종 DPU·YOLO 실험은 [dfxisp 보드 빠른 시작](https://github.com/haengmini/dfxisp/blob/HEAD/docs/quickstart-zcu104.md)으로 이어집니다.
+처음 시작한다면 [SD 카드 준비와 UART 부팅](docs/PetaLinux_tutorial_Note.md#219-sd-카드-파티션-및-파일-준비)으로 이동하세요. 이후 [보드에서 행렬곱 실행](docs/PetaLinux_tutorial_Note.md#15-가속기-실행-검증-및-성능-측정)을 확인하면 이 실습이 완료됩니다. 최종 DPU·YOLO 실험은 [dfxisp 보드 빠른 시작](https://github.com/haengmini/dfxisp/blob/public-v1/docs/quickstart-zcu104.md)으로 이어집니다.
 
 1. Vitis HLS로 `hls/mmult.cpp` 합성 → IP 패키징
 2. Vivado에서 ZynqMP PS와 가속기 IP 연결 → 비트스트림/XSA 생성
