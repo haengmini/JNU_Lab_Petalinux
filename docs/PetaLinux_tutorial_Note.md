@@ -447,8 +447,8 @@ ZCU104 보드의 부팅 모드 스위치 **SW6**을 SD1 부팅 모드로 설정�
 
 PC와 ZCU104를 USB 케이블로 연결하고 시리얼 터미널(Tera Term, PuTTY 등)을 엽니다:
 
-- **Baud Rate:** 115200
-- **Data:** 8 bit, **Parity:** None, **Stop:** 1 bit, **Flow Control:** None
+- **전송 속도(Baud Rate):** 115200
+- **데이터:** 8비트, **패리티:** 없음, **정지 비트:** 1비트, **흐름 제어:** 없음
 
 ### 2.22 PetaLinux 부팅 검증
 
@@ -503,7 +503,7 @@ cat /proc/device-tree/model
 
 - `**S_AXI_CONTROL` (AXI4-Lite Slave):** 프로세서의 가속기 제어 및 상태 모니터링
 - `**M_AXI` (AXI4 Master):** 가속기가 직접 PS DDR 메모리를 고속으로 읽고 쓰기 위한 DMA 데이터 경로
-- **Clock &amp; Reset:** `ap_clk`, `ap_rst_n`
+- **클럭 및 리셋(Clock &amp; Reset):** `ap_clk`, `ap_rst_n`
 - **Interrupt:** 가속기 연산 완료를 CPU GIC로 통보하는 `interrupt` 신호
 
 ---
@@ -1267,9 +1267,9 @@ tr '\0' '\n' < /sys/bus/platform/devices/70000000.mmult-buffer/of_node/linux,uio
 
 | 행렬 (Matrix)  | Linux 유저스페이스 `mmap` 오프셋 | FPGA 가속기 물리 주소 (Physical Addr) | 데이터 크기           |
 | :------------: | :-----------------------: | :------------------------------: | :----------------: |
-| **Matrix A** | `+0x0000`               | `0x7000_0000`                  | 1 KiB (16×16×4B) |
-| **Matrix B** | `+0x1000`               | `0x7000_1000`                  | 1 KiB (16×16×4B) |
-| **Matrix C** | `+0x2000`               | `0x7000_2000`                  | 1 KiB (16×16×4B) |
+| **행렬 A** | `+0x0000`               | `0x7000_0000`                  | 1 KiB (16×16×4B) |
+| **행렬 B** | `+0x1000`               | `0x7000_1000`                  | 1 KiB (16×16×4B) |
+| **행렬 C** | `+0x2000`               | `0x7000_2000`                  | 1 KiB (16×16×4B) |
 
 
 ### 14.9 C++ 실행 바이너리 확인
