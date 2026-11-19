@@ -4,7 +4,7 @@ AMD/Xilinx **ZCU104** 보드에서 Vitis HLS로 만든 **행렬 곱셈(Matrix Mu
 
 - **대상 보드:** Xilinx ZCU104 (Zynq UltraScale+ MPSoC, `xczu7ev-ffvc1156-2-e`)
 - **툴 버전:** Vivado / Vitis HLS / PetaLinux 전부 **2024.1**
-- **개발 환경:** 네이티브 Ubuntu 24.04 LTS (WSL/Windows 미사용)
+- **개발 환경:** [AMD PetaLinux 2024.1 지원 목록](https://docs.amd.com/r/2024.1-English/ug1144-petalinux-tools-reference-guide/Installation-Requirements)의 Ubuntu 22.04.3 LTS를 기준으로 준비합니다.
 - **원본 튜토리얼:** [Xilinx-PetaLinux-Based-FPGA-Acceleration-Design-Tutorial](https://github.com/vandinhtranengg/Xilinx-PetaLinux-Based-FPGA-Acceleration-Design-Tutorial/)
 
 ## 아키텍처 한눈에 보기
@@ -35,6 +35,8 @@ petalinux_accel/
 `mmult_hls/`, `mmult_zcu104/`, `project/`는 각각 Vitis HLS, Vivado, PetaLinux 툴이 생성하는 대용량 빌드 산출물(수십GB)이라 저장소에는 올리지 않고 로컬에만 둡니다. 소스(`hls/`, `app/`)와 문서(`docs/`)만으로 전체 워크플로우를 다시 재현할 수 있습니다.
 
 ## 진행 순서
+
+처음 시작한다면 [SD 카드 준비와 UART 부팅](docs/PetaLinux_tutorial_Note.md#219-sd-카드-파티션-및-파일-준비)으로 이동하세요. 이후 [보드에서 행렬곱 실행](docs/PetaLinux_tutorial_Note.md#15-가속기-실행-검증-및-성능-측정)을 확인하면 이 실습이 완료됩니다. 최종 DPU·YOLO 실험은 [dfxisp 보드 빠른 시작](https://github.com/haengmini/dfxisp/blob/HEAD/docs/quickstart-zcu104.md)으로 이어집니다.
 
 1. Vitis HLS로 `hls/mmult.cpp` 합성 → IP 패키징
 2. Vivado에서 ZynqMP PS와 가속기 IP 연결 → 비트스트림/XSA 생성
